@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "testresdict.Windows": {
+      "commandName": "MsixPackage"
+    }
+  }
+}

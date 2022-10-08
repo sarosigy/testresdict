@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+    x:Class="testresdict.CommonRes"
+    xmlns:local="using:testresdict"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <DataTemplate x:Key="dtListItems">
+        <TextBlock Text="{Binding}" ContextFlyout="{StaticResource flkAccRej}" />
+    </DataTemplate>
+
+    <Flyout x:Key="flkAccRej" x:Name="flAccRej" Placement="Bottom">
+        <StackPanel>
+            <TextBlock Text="To accept this change click Accept. Rejecting will delete the change." Margin="5"/>
+            <CommandBar HorizontalAlignment="Left" DefaultLabelPosition="Right">
+                <AppBarButton Icon="Accept" Label="Accept" Click="btnAccept_Click" />
+                <AppBarButton Icon="Cancel" Label="Reject" Click="btnReject_Click" />
+            </CommandBar>
+        </StackPanel>
+    </Flyout>
+
+</ResourceDictionary>
